@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:dev",
+    "test:dev": "TEST_ENV=development npx playwright test",
+    "test:staging": "TEST_ENV=staging npx playwright test",
+    "test:prod": "TEST_ENV=production npx playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sergii-g90/Playwright-TS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sergii-g90/Playwright-TS/issues"
+  },
+  "homepage": "https://github.com/Sergii-g90/Playwright-TS#readme",
+  "description": "",
+  "devDependencies": {
+    "dotenv": "^16.5.0",
+    "playwright": "^1.52.0"
+  }
+}
