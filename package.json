@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "npm run test:dev",
     "test:dev": "TEST_ENV=development npx playwright test",
     "test:staging": "TEST_ENV=staging npx playwright test",
-    "test:prod": "TEST_ENV=production npx playwright test"
+    "test:prod": "TEST_ENV=production npx playwright test",
+    "test:e2e": "TEST_ENV=development npx playwright test tests/e2e",
+    "test:api": "TEST_ENV=development npx playwright test tests/api"
   },
   "repository": {
     "type": "git",
@@ -21,7 +26,11 @@
   "homepage": "https://github.com/Sergii-g90/Playwright-TS#readme",
   "description": "",
   "devDependencies": {
+    "@types/node": "^22.15.21",
     "dotenv": "^16.5.0",
-    "playwright": "^1.52.0"
+    "playwright": "^1.52.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
